@@ -1,0 +1,9 @@
+#C1E6D7	Verde claro
+#00895B	Verde oscuro
+#ACFEC0	Verde menta
+#FAFBCA	Amarillo crema
+#DAECF9	Azul claro
+#3D2B5F	Púrpura oscuro
+#EB7699	Rosa
+#F4F4EC	Blanco roto
+#373533	Negro oscuro
