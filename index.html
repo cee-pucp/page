@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>XIV Coloquio de Estudiantes de Economía PUCP · 2026</title>
+  <link rel="icon" type="image/png" href="assets/favicon-coloquio.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-coloquio.png" />
   <meta name="description"
     content="XIV Coloquio de Estudiantes de Economía de la PUCP — 16, 17 y 18 de junio de 2026. «Voces que investigan, ideas que transforman.» Inscripciones abiertas." />
 
@@ -1339,6 +1341,60 @@
     .gallery-note { text-align: center; margin-top: 30px; color: var(--text-muted); font-size: .95rem; }
     .gallery-note a { color: var(--verde); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 
+    /* ---- Memorias: edición + subsecciones por mesa ---- */
+    .edition-block { margin-top: 64px; }
+    .edition-block:first-of-type { margin-top: 40px; }
+    .edition-head {
+      display: flex; align-items: center; gap: 14px;
+      padding-bottom: 16px; margin-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+    .edition-head .ed-tag {
+      flex-shrink: 0;
+      font-family: var(--font-display); font-weight: 700;
+      font-size: .8rem; letter-spacing: .04em;
+      color: #fff; background: var(--verde);
+      padding: 6px 14px; border-radius: var(--r-pill);
+    }
+    .edition-head h3 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: 1.5rem; color: var(--text); margin: 0;
+    }
+    .mesa-block { margin-top: 40px; }
+    .mesa-head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .mesa-num {
+      flex-shrink: 0;
+      display: grid; place-items: center;
+      width: 34px; height: 34px; border-radius: 50%;
+      background: var(--verde-claro); color: var(--verde-osc);
+      font-family: var(--font-display); font-weight: 700; font-size: .95rem;
+    }
+    .mesa-title {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: 1.12rem; color: var(--text); margin: 0; line-height: 1.25;
+    }
+    .mesa-grid { grid-auto-rows: 200px; }
+    .mesa-grid .g-item { grid-row: auto; grid-column: auto; }
+    .mesa-grid .g-item.is-hidden { display: none; }
+    .mesa-more {
+      margin-top: 16px;
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-display); font-weight: 700; font-size: .9rem;
+      color: var(--verde-osc); background: var(--verde-claro);
+      border: none; border-radius: var(--r-pill);
+      padding: 11px 22px; cursor: pointer;
+      transition: background var(--t), transform var(--t);
+    }
+    .mesa-more:hover { background: var(--verde-menta); transform: translateY(-2px); }
+    .mesa-more:active { transform: translateY(0); }
+    .memorias-empty {
+      text-align: center; color: var(--text-muted);
+      font-size: .95rem; padding: 24px 0;
+    }
+    @media (max-width: 720px) {
+      .mesa-grid { grid-auto-rows: 150px; }
+    }
+
     .lightbox {
       position: fixed;
       inset: 0;
@@ -2068,7 +2124,6 @@ Completar el formulario en línea te toma solo un par de minutos. Lilí ya asegu
           <div class="speakers-grid">
             <div class="speaker reveal"><div class="speaker-photo"><img src="assets/sebastian-pintado.jpeg" alt="Sebastián Pintado" loading="lazy" /></div><div class="speaker-info"><h4>Sebastián Pintado</h4><p class="speaker-paper">Impacto de la permanencia del empleo formal en la inclusión financiera en el Perú</p></div></div>
             <div class="speaker reveal"><div class="speaker-photo"><img src="assets/marcelo-paliza.jpeg" alt="Marcelo Paliza" loading="lazy" /></div><div class="speaker-info"><h4>Marcelo Paliza</h4><p class="speaker-paper">Assessing the factors that promote adoption and use of a CBDC wallet: evidence from Peru</p></div></div>
-            <div class="speaker reveal"><div class="speaker-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div class="speaker-info"><h4>Rafaela Andrade</h4><p class="speaker-paper">Instrumentos financieros verdes y su contribución a la mitigación de gases de efecto invernadero en el Perú (2014-2021)</p></div></div>
           </div>
         </div>
 
@@ -2091,8 +2146,7 @@ Completar el formulario en línea te toma solo un par de minutos. Lilí ya asegu
           <div class="speakers-grid">
             <div class="speaker reveal"><div class="speaker-photo"><img src="assets/daniel-flores.jpeg" alt="Daniel Flores" loading="lazy" /></div><div class="speaker-info"><h4>Daniel Flores</h4><p class="speaker-paper">La percepción de la desigualdad y determinantes de las preferencias por la redistribución en Latinoamérica</p></div></div>
             <div class="speaker reveal"><div class="speaker-photo"><img src="assets/gutarra-gallardo-velarde.jpeg" alt="Cristina Gutarra, Marcelo Gallardo y Nicolás Velarde" loading="lazy" /></div><div class="speaker-info"><h4>Cristina Gutarra · Marcelo Gallardo · Nicolás Velarde</h4><p class="speaker-paper">Information and Voting: Evidence from Peru's 2026 Presidential Election</p></div></div>
-            <div class="speaker reveal"><div class="speaker-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div class="speaker-info"><h4>Angie Vega</h4><p class="speaker-paper">Diseño de decisiones y donación de órganos: evidencia experimental sobre la opción por defecto en el Perú</p></div></div>
-            <div class="speaker reveal"><div class="speaker-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div class="speaker-info"><h4>Sheyla Bautista</h4><p class="speaker-paper">Diseño de decisiones y donación de órganos: evidencia experimental sobre la opción por defecto en el Perú</p></div></div>
+            <div class="speaker reveal"><div class="speaker-photo"><img src="assets/angie-vega-sheyla-bautista.jpg" alt="Angie Vega y Sheyla Bautista" loading="lazy" /></div><div class="speaker-info"><h4>Angie Vega · Sheyla Bautista</h4><p class="speaker-paper">Diseño de decisiones y donación de órganos: evidencia experimental sobre la opción por defecto en el Perú</p></div></div>
           </div>
         </div>
 
@@ -2102,8 +2156,8 @@ Completar el formulario en línea te toma solo un par de minutos. Lilí ya asegu
             <div class="pm-titles"><span class="pm-eyebrow">Mesa 6</span><h3>Política monetaria y Economía Internacional</h3></div>
           </div>
           <div class="speakers-grid">
-            <div class="speaker reveal"><div class="speaker-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div class="speaker-info"><h4>Guillermo Chávez</h4><p class="speaker-paper">Consecuencias de los cambios de las relaciones comerciales energéticas rusas</p></div></div>
-            <div class="speaker reveal"><div class="speaker-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div class="speaker-info"><h4>Herick Pacheco</h4><p class="speaker-paper">Weaponización monetaria y dependencia en el Perú: estabilidad aparente y recomposición entrópica bajo guerras globales</p></div></div>
+            <div class="speaker reveal"><div class="speaker-photo"><img src="assets/guillermo-chavez.jpeg" alt="Guillermo Chávez" loading="lazy" /></div><div class="speaker-info"><h4>Guillermo Chávez</h4><p class="speaker-paper">Consecuencias de los cambios de las relaciones comerciales energéticas rusas</p></div></div>
+            <div class="speaker reveal"><div class="speaker-photo"><img src="assets/herick-pacheco.jpg" alt="Herick Pacheco" loading="lazy" /></div><div class="speaker-info"><h4>Herick Pacheco</h4><p class="speaker-paper">Weaponización monetaria y dependencia en el Perú: estabilidad aparente y recomposición entrópica bajo guerras globales</p></div></div>
           </div>
         </div>
 
@@ -2186,11 +2240,28 @@ Completar el formulario en línea te toma solo un par de minutos. Lilí ya asegu
       </div>
 
       <!-- Las fotos reales reemplazan estos placeholders. data-cap = pie de foto -->
-      <div class="gallery-grid reveal" id="galleryGrid">
-        <div class="g-item wide tall" data-cap="Equipo del Coloquio · Edición XIII"><img src="assets/memoria-1.jpg" alt="Equipo del Coloquio de Economía 2025" loading="lazy" /></div>
-        <div class="g-item tall" data-cap="Afiche oficial · Edición XIII (2025)"><img src="assets/afiche-2025.jpg" alt="Afiche del XIII Coloquio de Estudiantes de Economía PUCP 2025" loading="lazy" /></div>
-        <div class="g-item" data-cap="Presentación de la memoria del coloquio"><img src="assets/memoria-2.jpg" alt="Presentación de la memoria del coloquio 2025" loading="lazy" /></div>
-        <div class="g-item" data-cap="En la Facultad de Ciencias Sociales · PUCP"><img src="assets/memoria-3.jpg" alt="Equipo en la Facultad de Ciencias Sociales de la PUCP" loading="lazy" /></div>
+      <div class="edition-block">
+        <div class="edition-head reveal">
+          <span class="ed-tag">Edición XIII</span>
+          <h3>Coloquio 2025</h3>
+        </div>
+        <div class="gallery-grid reveal" id="galleryGrid" style="margin-top:24px">
+          <div class="g-item wide tall" data-cap="Equipo del Coloquio · Edición XIII"><img src="assets/memoria-1.jpg" alt="Equipo del Coloquio de Economía 2025" loading="lazy" /></div>
+          <div class="g-item tall" data-cap="Afiche oficial · Edición XIII (2025)"><img src="assets/afiche-2025.jpg" alt="Afiche del XIII Coloquio de Estudiantes de Economía PUCP 2025" loading="lazy" /></div>
+          <div class="g-item" data-cap="Presentación de la memoria del coloquio"><img src="assets/memoria-2.jpg" alt="Presentación de la memoria del coloquio 2025" loading="lazy" /></div>
+          <div class="g-item" data-cap="En la Facultad de Ciencias Sociales · PUCP"><img src="assets/memoria-3.jpg" alt="Equipo en la Facultad de Ciencias Sociales de la PUCP" loading="lazy" /></div>
+        </div>
+      </div>
+
+      <!-- Edición 2026: fotos agrupadas por mesa. Se cargan solas desde las carpetas de /assets.
+           Sube las fotos como 1.jpg, 2.jpg, 3.jpg… dentro de cada carpeta de mesa. -->
+      <div class="edition-block">
+        <div class="edition-head reveal">
+          <span class="ed-tag">Edición XIV</span>
+          <h3>Coloquio 2026 · por mesa</h3>
+        </div>
+        <div id="mesas2026"></div>
+        <p class="memorias-empty" id="mesasEmpty">Las fotos de las mesas de 2026 aparecerán aquí en cuanto se suban a las carpetas correspondientes.</p>
       </div>
 
       <p class="gallery-note">📸 ¿Tienes fotos de ediciones anteriores? <a href="#contacto">Compártelas con nosotros</a>.</p>
@@ -2210,7 +2281,7 @@ Completar el formulario en línea te toma solo un par de minutos. Lilí ya asegu
         <div class="contact-card reveal">
           <span class="contact-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></span>
           <h4>Correo</h4>
-          <a href="/cdn-cgi/l/email-protection#a8cbc7c4c7d9ddc1c786cdcbc7c6c7c5c1c9e8d8ddcbd886cdccdd86d8cd"><span class="__cf_email__" data-cfemail="1f7c7073706e6a7670317a7c70717072767e5f6f6a7c6f317a7b6a316f7a">[email&#160;protected]</span></a>
+          <a href="/cdn-cgi/l/email-protection#64070b080b15110d0b4a01070b0a0b090d0524141107144a0100114a1401"><span class="__cf_email__" data-cfemail="60030f0c0f1115090f4e05030f0e0f0d090120101503104e0504154e1005">[email&#160;protected]</span></a>
         </div>
         <div class="contact-card reveal">
           <span class="contact-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
@@ -2400,21 +2471,24 @@ XIV CEE </span>
       });
     });
 
-    /* ====== Galería: lightbox simple ====== */
-    const gItems = [...document.querySelectorAll('.g-item')];
+    /* ====== Galería: lightbox con navegación por grupo ====== */
     const lightbox = document.getElementById('lightbox');
     const lbCaption = document.getElementById('lbCaption');
     const lbImage = document.getElementById('lbImage');
+    let lbItems = [];
     let lbIndex = 0;
 
     const showLb = i => {
-      lbIndex = (i + gItems.length) % gItems.length;
-      const im = gItems[lbIndex].querySelector('img');
+      if (!lbItems.length) return;
+      lbIndex = (i + lbItems.length) % lbItems.length;
+      const im = lbItems[lbIndex].querySelector('img');
       if (lbImage && im) { lbImage.src = im.currentSrc || im.src; lbImage.alt = im.alt; }
-      lbCaption.textContent = gItems[lbIndex].dataset.cap || 'Foto del evento';
+      lbCaption.textContent = lbItems[lbIndex].dataset.cap || 'Foto del evento';
     };
-    const openLb = i => {
-      showLb(i);
+    const openLbFor = item => {
+      const grid = item.closest('.gallery-grid');
+      lbItems = grid ? [...grid.querySelectorAll('.g-item')] : [item];
+      showLb(lbItems.indexOf(item));
       lightbox.classList.add('open');
       document.body.style.overflow = 'hidden';
     };
@@ -2423,7 +2497,10 @@ XIV CEE </span>
       document.body.style.overflow = '';
     };
 
-    gItems.forEach((it, i) => it.addEventListener('click', () => openLb(i)));
+    document.addEventListener('click', e => {
+      const it = e.target.closest('.g-item');
+      if (it) openLbFor(it);
+    });
     document.getElementById('lbClose').addEventListener('click', closeLb);
     document.getElementById('lbPrev').addEventListener('click', () => showLb(lbIndex - 1));
     document.getElementById('lbNext').addEventListener('click', () => showLb(lbIndex + 1));
@@ -2434,6 +2511,138 @@ XIV CEE </span>
       if (e.key === 'ArrowLeft') showLb(lbIndex - 1);
       if (e.key === 'ArrowRight') showLb(lbIndex + 1);
     });
+
+    /* ====== Memorias 2026: carga automática de fotos por mesa ======
+       Las fotos viven en /assets, en una carpeta por mesa con estos nombres exactos.
+       Dentro de cada carpeta nómbralas 1.jpg, 2.jpg, 3.jpg… (también acepta .jpeg/.png).
+       Aparecen solas; no hay que tocar el HTML al subirlas. */
+    (function () {
+      const MESAS = [
+        { n: 1, folder: 'MESA 1 — Empleo y género', title: 'Empleo y género' },
+        { n: 2, folder: 'MESA 2 — Inversión pública y productividad', title: 'Inversión pública y productividad' },
+        { n: 3, folder: 'MESA 3 — Inclusión financiera y finanzas sostenibles', title: 'Inclusión financiera y finanzas sostenibles' },
+        { n: 4, folder: 'MESA 4 — Macrofinanzas', title: 'Macrofinanzas' },
+        { n: 5, folder: 'MESA 5 — Política monetaria y comercio exterior', title: 'Política monetaria y comercio exterior' },
+        { n: 6, folder: 'MESA 6 — Economía del comportamiento y experimental', title: 'Economía del comportamiento y experimental' },
+      ];
+      const EXTS = ['jpg', 'jpeg', 'png', 'JPG'];
+      const MAX = 80;       // máximo de fotos a buscar por mesa
+      const STOP_AFTER = 3; // detener tras N números seguidos sin foto
+
+      const container = document.getElementById('mesas2026');
+      const emptyNote = document.getElementById('mesasEmpty');
+      if (!container) return;
+
+      // Nombres de carpeta admitidos para cada mesa (se usa el primero que tenga fotos).
+      // Genera variantes con/sin tildes y con guión largo (—) o normal (-),
+      // además del respaldo corto "MESA N", por si el sistema altera los nombres al subir.
+      const stripAccents = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      function candidateFolders(mesa) {
+        const base = 'MESA ' + mesa.n;
+        const out = new Set();
+        for (const t of [mesa.title, stripAccents(mesa.title)]) {
+          out.add(base + ' — ' + t);
+          out.add(base + ' - ' + t);
+        }
+        out.add(base);
+        out.add('Mesa ' + mesa.n);
+        out.add('mesa-' + mesa.n);
+        return [...out];
+      }
+
+      // Resuelve a la URL válida de assets/<folder>/<n>.<ext> o null si no existe.
+      function findPhoto(folder, n) {
+        return new Promise(resolve => {
+          let i = 0;
+          (function tryExt() {
+            if (i >= EXTS.length) return resolve(null);
+            const src = encodeURI('assets/' + folder + '/' + n + '.' + EXTS[i]);
+            const img = new Image();
+            img.onload = () => resolve(src);
+            img.onerror = () => { i++; tryExt(); };
+            img.src = src;
+          })();
+        });
+      }
+
+      // Encuentra cuál carpeta candidata contiene la foto 1; null si ninguna.
+      async function resolveFolder(mesa) {
+        for (const folder of candidateFolders(mesa)) {
+          if (await findPhoto(folder, 1)) return folder;
+        }
+        return null;
+      }
+
+      async function loadMesa(mesa) {
+        const folder = await resolveFolder(mesa);
+        if (!folder) return false;
+
+        const found = [];
+        let misses = 0, n = 1;
+        while (n <= MAX && misses < STOP_AFTER) {
+          const src = await findPhoto(folder, n);
+          if (src) { found.push({ n, src }); misses = 0; }
+          else misses++;
+          n++;
+        }
+        if (!found.length) return false;
+
+        const block = document.createElement('div');
+        block.className = 'mesa-block';
+        const head = document.createElement('div');
+        head.className = 'mesa-head';
+        head.innerHTML = '<span class="mesa-num">' + mesa.n + '</span><h4 class="mesa-title">' + mesa.title + '</h4>';
+        const grid = document.createElement('div');
+        grid.className = 'gallery-grid mesa-grid';
+        found.forEach(f => {
+          const item = document.createElement('div');
+          item.className = 'g-item';
+          item.dataset.cap = 'Mesa ' + mesa.n + ' · ' + mesa.title;
+          const im = document.createElement('img');
+          im.src = f.src;
+          im.alt = 'Mesa ' + mesa.n + ' (' + mesa.title + ') — foto ' + f.n + ' · Coloquio 2026';
+          im.loading = 'lazy';
+          item.appendChild(im);
+          grid.appendChild(item);
+        });
+        block.appendChild(head);
+        block.appendChild(grid);
+
+        // Mostrar solo 4 fotos; el resto tras un botón "Ver más".
+        const LIMIT = 4;
+        const items = [...grid.children];
+        if (items.length > LIMIT) {
+          const hideExtra = hide => items.forEach((it, idx) => {
+            if (idx >= LIMIT) it.classList.toggle('is-hidden', hide);
+          });
+          hideExtra(true);
+          const hidden = items.length - LIMIT;
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'mesa-more';
+          btn.textContent = 'Ver más (' + hidden + ')';
+          let open = false;
+          btn.addEventListener('click', () => {
+            open = !open;
+            hideExtra(!open);
+            btn.textContent = open ? 'Ver menos' : 'Ver más (' + hidden + ')';
+          });
+          block.appendChild(btn);
+        }
+
+        container.appendChild(block);
+        return true;
+      }
+
+      (async function () {
+        let any = false;
+        for (const mesa of MESAS) {
+          const ok = await loadMesa(mesa);
+          if (ok && !any) { any = true; if (emptyNote) emptyNote.style.display = 'none'; }
+        }
+        if (emptyNote && !any) emptyNote.style.display = '';
+      })();
+    })();
 
     /* ====== Cuenta regresiva al inicio del coloquio ====== */
     (function () {
